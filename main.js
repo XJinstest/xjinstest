@@ -62,33 +62,33 @@ window.boot = function() {
         }
     }
 
-    function setLoadingDisplay() {
-        // Loading splash scene
-        var splash = document.getElementById('splash');
-        // var progressBar = splash.querySelector('.progress-bar span');
+    // function setLoadingDisplay() {
+    //     // Loading splash scene
+    //     var splash = document.getElementById('splash');
+    //     // var progressBar = splash.querySelector('.progress-bar span');
 
 
 
-        cc.loader.onProgress = function(completedCount, totalCount, item) {
+    //     cc.loader.onProgress = function(completedCount, totalCount, item) {
 
-            loadData.completedCount = completedCount;
-            loadData.totalCount = totalCount;
+    //         loadData.completedCount = completedCount;
+    //         loadData.totalCount = totalCount;
 
-            if (loadingBool) {
-                var loadintT = document.getElementById("loadingText")
-            }
-            var percent = 100 * completedCount / totalCount;
-            if (loadingBool && loadingNum >= 1 && totalCount > 1) {
-                if (percent.toFixed(0) >= 100) {
-                    loadintT.innerHTML = 'loading......100' + '%';
-                    setTimeout(function() {
-                        loadingBool = false;
-                        loadintT.remove();
-                    }, 0.1 * 1000);
-                    clearInterval(timer);
-                }
-            }
-            loadingNum++;
+    //         if (loadingBool) {
+    //             var loadintT = document.getElementById("loadingText")
+    //         }
+    //         var percent = 100 * completedCount / totalCount;
+    //         if (loadingBool && loadingNum >= 1 && totalCount > 1) {
+    //             if (percent.toFixed(0) >= 100) {
+    //                 loadintT.innerHTML = 'loading......100' + '%';
+    //                 setTimeout(function() {
+    //                     loadingBool = false;
+    //                     loadintT.remove();
+    //                 }, 0.1 * 1000);
+    //                 clearInterval(timer);
+    //             }
+    //         }
+    //         loadingNum++;
             // if(loadingBool){
             // 	var loadintT = document.getElementById("loadingText")
             // }
